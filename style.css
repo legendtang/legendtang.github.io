@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/*
+Name: LegendT.me - the Homepage / Navipage
+Description: Designed and coded by LegendT.me
+Version: 0.1
+Inspired by otakism.org.
+*/
+
+*{margin: 0;padding: 0; border:none;}
+body{font-size:14px;font-family:"Segoe UI", "Century Gothic", Arial, "Microsoft YaHei",Sans-Serif;}
+a{text-decoration:none;}
+.clear{clear:both;}
+.cf:before, .cf:after {content:"";display:table;} 
+.cf:after{clear:both;} 
+.cf{zoom:1;}
+.none{display:none;}
+.left{float:left;}
+.right{float:right;}
+
+#bgblack{width:50%;height:100%;position:fixed;top:0;left:0;background-color:#3f3f3f;z-index:-1;}
+#bgwhite{width:50%;height:100%;position:fixed;top:0;left:50%;background-color:#f3f3f3;z-index:-1;}
+#circle{
+	position:absolute;
+	display:block;
+	width:400px;height:400px;
+	border-radius:200px;
+	-moz-border-radius:200px;
+	-ms-border-radius:200px;
+	-o-border-radius:200px;
+	-webkit-border-radius:200px;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+	cursor:help;
+	overflow: hidden;
+}
+#ccwhite{
+	width: 200px;
+	height: 400px;
+	background-color: #f3f3f3;
+}
+
+#ccblack{
+	width: 200px;
+	height: 400px;
+	background-color: #3f3f3f;
+}
+#oval{
+	position:absolute;
+	display:block;
+	width:400px;height:50px;
+	border-radius:200px / 25px;
+	-moz-border-radius:200px / 25px;
+	-ms-border-radius:200px / 25px;
+	-o-border-radius:200px / 25px;
+	-webkit-border-radius:200px / 25px;
+	top: 0;right: 0;bottom: 0;left: 0;
+	margin:550px auto auto;
+	cursor:help;
+	overflow: hidden;
+}
+#ovwhite{
+	width: 200px;
+	height: 50px;
+	background-color: #f3f3f3;
+}
+
+#ovblack{
+	width: 200px;
+	height: 50px;
+	background-color: #3f3f3f;
+}
+
+#line-1{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
+
+#line-2,#line-3{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.slide-up{
+	z-index: 5;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+#inside{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	top:50%;left:13%;
+	transform:translate(-50%,-50%);
+	background: url('./images/inside.png') 0 0 no-repeat;
+	cursor: not-allowed;
+}
+
+/*#inside:hover,*/#inside:active{
+	background: url('./images/inside.png') 0 -200px #f3f3f3 no-repeat;
+}
+
+#outside{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	top:50%;left:85%;
+	transform: translate(-50%,-50%);
+	background: url('./images/outside.png') 0 0 no-repeat;
+	cursor: url('./images/jinkela.jpg'), pointer;
+}
+
+#outside:hover,#outside:active{
+	background: url('./images/outside.png') 0 -200px #3f3f3f no-repeat;
+}
+
+#love-and-lovers-1, #love-and-lovers-2{
+	width: 50px;
+	height: 260px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+#love-and-lovers-1{
+	top: 30%;left: 25%; /*Don't ask me why*/
+	background: url('./images/lali.png') 0 0 no-repeat;
+}
+
+#love-and-lovers-2{
+	top: 30%;left: 71%; /*Don't ask me why*/
+	background: url('./images/lalo.png') 0 0 no-repeat;
+}
+
+.animated {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	-ms-animation-duration: 1s;
+	-o-animation-duration: 1s;
+	animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
