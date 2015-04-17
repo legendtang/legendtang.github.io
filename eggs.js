@@ -1,4 +1,4 @@
-console.log("%c", "padding:6px 150px; line-hight: 28px; background:url('http://legendt.me/images/Konami_Code.png') no-repeat;");
+console.log("%c", "padding:6px 150px; line-hight: 28px; background:url('http://legendt.com/images/Konami_Code.png') no-repeat;");
 
 $(document).ready(function(){
 	$("#outside" ).on( "click",function() {
