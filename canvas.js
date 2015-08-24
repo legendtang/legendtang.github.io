@@ -1,6 +1,6 @@
 /*
 Name: LegendT.me - the Homepage / Navipage
-Description: Designed and coded by LegendT.me
+Description: Designed and coded by @LegendTang
 Version: 0.1
 */
 
@@ -12,7 +12,7 @@ var h = 0;
 // var wm = 0;
 // var hm = 0;
 
-function resizeCanvas(){ 
+function resizeCanvas(){
 	w = $(document).width() / 2 + 200;
 	h = $(document).height() / 2  + 200 / 6;
 	// wm = w / 400;
@@ -64,6 +64,6 @@ function initialCanvas(){
 resizeCanvas();
 initialCanvas();
 
-window.onresize = function(){   
+window.onresize = function(){
     resizeCanvas();
 }
